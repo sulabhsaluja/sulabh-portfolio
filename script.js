@@ -301,6 +301,20 @@ function showNotification(message, type = "info") {
   }, 4000);
 }
 
+// Enhanced Resume Dropdown Functionality
+function toggleResumeMenu() {
+  const dropdown = document.getElementById("resumeDropdown");
+  dropdown.classList.toggle("show");
+
+  // Close dropdown when clicking anywhere else
+  document.addEventListener("click", function closeDropdown(e) {
+    if (!e.target.closest(".resume-toggle")) {
+      dropdown.classList.remove("show");
+      document.removeEventListener("click", closeDropdown);
+    }
+  });
+}
+
 // Enhanced Parallax Effects
 let ticking = false;
 

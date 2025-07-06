@@ -42,14 +42,25 @@
         <p class="role">Full Stack Developer</p>
 
         <!-- Resume Button -->
-        <a
-          href="https://drive.google.com/uc?export=download&id=1q-UQqJelrDw2YdllYsEGTun5YkP-n2f5"
-          target="_blank"
-          class="resume-btn"
-        >
-          <i class="fas fa-download"></i>
-          <span>Download Resume</span>
-        </a>
+        <div class="resume-toggle">
+          <button class="resume-btn" onclick="toggleResumeMenu()">
+            <i class="fas fa-download"></i> Download Resume
+          </button>
+          <div id="resumeDropdown" class="resume-dropdown hidden">
+            <a
+              href="https://drive.google.com/file/d/17tNbSaoPuVR__xH6cxc_t-VxZC9eoHlE/view?usp=sharing"
+              target="_blank"
+            >
+              <i class="fas fa-code"></i> Software Developer Resume
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1pGXuH6N2aRqF6EbOek378564DhBObObG/view?usp=sharing"
+              target="_blank"
+            >
+              <i class="fas fa-laptop-code"></i> Web Developer Resume
+            </a>
+          </div>
+        </div>
 
         <!-- Contact Details -->
         <div class="contact-details">

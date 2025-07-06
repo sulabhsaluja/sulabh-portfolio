@@ -194,6 +194,84 @@ body::before {
   color: var(--text-muted);
 }
 
+.resume-toggle {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.resume-btn {
+  position: relative;
+  width: 100%;
+  background: var(--gradient-accent);
+  color: var(--bg-primary);
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.resume-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px var(--shadow-medium);
+  z-index: 100;
+  overflow: hidden;
+  transform: translateY(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.resume-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 2rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.resume-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.resume-dropdown a:hover {
+  background: var(--bg-secondary);
+  color: var(--accent-primary);
+}
+
+.resume-dropdown a i {
+  width: 20px;
+  text-align: center;
+  color: var(--accent-primary);
+}
+
+.resume-dropdown.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
 /* Enhanced Mobile Header */
 .mobile-header {
   display: none;
