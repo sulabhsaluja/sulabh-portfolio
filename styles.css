@@ -1764,7 +1764,7 @@ body::before {
 
 @media (max-width: 480px) {
   .sidebar {
-    width: 100%;
+    width: 80%;
   }
 
   .mobile-header-content {
