@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website — a sleek and responsive showcase of my skills, projects, and resume. Built using **HTML, CSS, and JavaScript**, this site serves as a digital introduction to who I am as a developer.
 
-🔗 **Live Site**: [Portfolio](https://<your-github-username>.github.io/sulabh-portfolio)
+🔗 **Live Site**: [Portfolio](https://sulabhsaluja.github.io/sulabh-portfolio)
 
 ---
 
