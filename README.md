@@ -28,8 +28,7 @@ Welcome to my personal portfolio website — a sleek and responsive showcase of 
 sulabh-portfolio/
 ├── index.html        # Main HTML file
 ├── styles.css        # Styles including dark/light theme
-├── script.js         # Theme toggle & interactivity
-└── .gitignore
+|── script.js         # Theme toggle & interactivity
 
 ````
 
