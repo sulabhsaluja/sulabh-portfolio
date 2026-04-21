@@ -9,7 +9,7 @@ Welcome to my personal portfolio website — a sleek and responsive showcase of 
 ## 📸 Preview
 
 ![Portfolio Preview](https://github.com/sulabhsaluja/sulabh-portfolio/assets/preview.gif)
-![image](https://github.com/user-attachments/assets/cb47451b-5f7c-4b1c-9b00-1e43eb11e0a5)
+
 
 
 ---
