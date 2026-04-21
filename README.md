@@ -6,14 +6,6 @@ Welcome to my personal portfolio website — a sleek and responsive showcase of 
 
 ---
 
-## 📸 Preview
-
-![Portfolio Preview](https://github.com/sulabhsaluja/sulabh-portfolio/assets/preview.gif)
-
-
-
----
-
 ## 🚀 Features
 
 - 🎨 **Theme Toggle** — Light & Dark modes with local storage support.
