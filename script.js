@@ -13,7 +13,7 @@ themeBtn.addEventListener("click", () => {
 const navLinks = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll(".section");
 
-function navigateTo(id) {
+function navigateTo(id) {   
   navLinks.forEach(l => l.classList.toggle("active", l.dataset.section === id));
   sections.forEach(s => s.classList.toggle("active", s.id === id));
   document.querySelector("main").scrollTo({ top: 0 });
