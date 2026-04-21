@@ -1,835 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sulabh Saluja - Full Stack Developer</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- EmailJS SDK -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-  </head>
-  <body>
-    <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sulabh Saluja</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <span class="nav-name">Sulabh Saluja</span>
+      <span class="nav-sep">·</span>
+      <span class="nav-status"><span class="status-dot"></span>Open to work</span>
+    </div>
+    <div class="nav-right">
+      <button class="nav-link active" data-section="about">About</button>
+      <button class="nav-link" data-section="work">Work</button>
+      <button class="nav-link" data-section="resume">Résumé</button>
+      <button class="nav-link" data-section="contact">Contact</button>
+      <button class="theme-btn" id="themeToggle" title="Toggle theme">
+        <i class="fas fa-circle-half-stroke"></i>
+      </button>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+      <span></span><span></span>
     </button>
+  </nav>
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-content">
-        <!-- Avatar -->
-        <div class="avatar-container">
-          <div class="avatar">
-            <span>SS</span>
-          </div>
-          <div class="avatar-glow"></div>
-        </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="nav-link active" data-section="about">About</button>
+    <button class="nav-link" data-section="work">Work</button>
+    <button class="nav-link" data-section="resume">Résumé</button>
+    <button class="nav-link" data-section="contact">Contact</button>
+  </div>
 
-        <!-- Name and Role -->
-        <h1 class="name">Sulabh Saluja</h1>
-        <p class="role">Full Stack Developer</p>
+  <main>
 
-        <!-- Resume Button -->
-        <div class="resume-toggle">
-          <button class="resume-btn" onclick="toggleResumeMenu()">
-            <i class="fas fa-download"></i> Download Resume
-          </button>
-          <div id="resumeDropdown" class="resume-dropdown hidden">
-            <a
-              href="https://drive.google.com/file/d/15QbJqX2UwFqPnufhfBwXmFmrgOa2Ge1M/view?usp=sharing"
-              target="_blank"
-            >
-              <i class="fas fa-laptop-code"></i> Download Resume
+    <!-- ===== ABOUT ===== -->
+    <section class="section active" id="about">
+
+      <div class="hero">
+        <div class="hero-text">
+          <p class="hero-eyebrow">Hey, I'm Sulabh —</p>
+          <h1 class="hero-headline">I build things<br><em>that actually work.</em></h1>
+          <p class="hero-sub">
+            Backend engineer & full-stack developer based in Punjab, India.
+            I care about clean architecture, fast APIs, and code that doesn't
+            embarrass you six months later.
+          </p>
+          <div class="hero-links">
+            <a href="https://github.com/sulabhsaluja" target="_blank" class="pill-link">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com/in/sulabhsaluja" target="_blank" class="pill-link">
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://leetcode.com/u/sulabh_saluja" target="_blank" class="pill-link">
+              <i class="fas fa-code"></i> LeetCode
+            </a>
+            <a href="https://drive.google.com/file/d/1fas1d0LwyPupkhZ5KJWvAFab09o1EZjv/view?usp=sharing" target="_blank" class="pill-link accent">
+              <i class="fas fa-file-lines"></i> Résumé
             </a>
           </div>
         </div>
-
-        <!-- Contact Details -->
-        <div class="contact-details">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
+        <div class="hero-aside">
+          <div class="avatar-box">
+            <div class="avatar-initials">SS</div>
+          </div>
+          <div class="quick-facts">
+            <div class="fact">
+              <span class="fact-label">Currently</span>
+              <span class="fact-value">B.E. CSE @ Chitkara University</span>
             </div>
-            <div class="contact-info">
-              <span class="contact-label">Email</span>
-              <span class="contact-value">connect.sulabhsaluja@gmail.com</span>
+            <div class="fact">
+              <span class="fact-label">CGPA</span>
+              <span class="fact-value">9.18 / 10</span>
+            </div>
+            <div class="fact">
+              <span class="fact-label">Email</span>
+              <span class="fact-value"><a href="mailto:sulabhsaluja111@gmail.com">sulabhsaluja111@gmail.com</a></span>
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-info">
-              <span class="contact-label">Phone</span>
-              <span class="contact-value">Available upon request</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-calendar"></i>
-            </div>
-            <div class="contact-info">
-              <span class="contact-label">Birthday</span>
-              <span class="contact-value">March 25, 2005</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-info">
-              <span class="contact-label">Location</span>
-              <span class="contact-value">Punjab, India</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Social Links -->
-        <div class="social-links">
-          <a
-            href="https://www.linkedin.com/in/sulabhsaluja"
-            target="_blank"
-            class="social-link linkedin"
-            title="LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i>
-            <div class="social-glow"></div>
-          </a>
-          <a
-            href="https://www.github.com/sulabhsaluja"
-            target="_blank"
-            class="social-link github"
-            title="GitHub"
-          >
-            <i class="fab fa-github"></i>
-            <div class="social-glow"></div>
-          </a>
-          <a
-            href="https://twitter.com/sulabhsaluja"
-            target="_blank"
-            class="social-link twitter"
-            title="Twitter"
-          >
-            <i class="fab fa-twitter"></i>
-            <div class="social-glow"></div>
-          </a>
         </div>
       </div>
-    </aside>
 
-    <!-- Mobile Header -->
-    <header class="mobile-header">
-      <div class="mobile-header-content">
-        <div class="mobile-profile">
-          <div class="mobile-avatar">SS</div>
-          <div class="mobile-info">
-            <h1>Sulabh Saluja</h1>
-            <p>Full Stack Developer</p>
+      <div class="about-body">
+        <div class="about-col-main">
+          <h2 class="section-heading">A bit about me</h2>
+          <p>
+            I'm a third-year CS student who got obsessed with backend engineering
+            early on. Most of my time goes into Java and Spring Boot — building REST
+            APIs, wrestling with Hibernate/JPA, optimising SQL queries, the usual.
+            I've shipped a few full-stack projects, contributed to open source
+            through GSSoC 2025, and I hold the Nutanix Certified Associate (NCA 6.0)
+            cert for cloud infrastructure.
+          </p>
+          <p>
+            I like working on problems where performance actually matters — where a
+            badly written query costs real money or a missing index kills user
+            experience. I follow SOLID principles not because a textbook says so,
+            but because I've felt the pain of ignoring them.
+          </p>
+        </div>
+
+        <div class="about-col-side">
+          <h2 class="section-heading">Stack</h2>
+
+          <div class="stack-group">
+            <p class="stack-label">Primary</p>
+            <div class="tag-row">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Hibernate / JPA</span>
+              <span class="tag">Spring Security</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <p class="stack-label">Backend & APIs</p>
+            <div class="tag-row">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Postman</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <p class="stack-label">Databases</p>
+            <div class="tag-row">
+              <span class="tag">MySQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Query Optimisation</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <p class="stack-label">Frontend</p>
+            <div class="tag-row">
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">HTML / CSS</span>
+            </div>
+          </div>
+
+          <div class="stack-group">
+            <p class="stack-label">Cloud & Tooling</p>
+            <div class="tag-row">
+              <span class="tag">AWS</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Git</span>
+              <span class="tag">Python</span>
+              <span class="tag">Vercel</span>
+            </div>
           </div>
         </div>
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
       </div>
-    </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Navigation -->
-      <nav class="navbar">
-        <div class="nav-links">
-          <button class="nav-link active" data-section="about">
-            <i class="fas fa-user"></i>
-            <span>About</span>
-          </button>
-          <button class="nav-link" data-section="resume">
-            <i class="fas fa-file-alt"></i>
-            <span>Resume</span>
-          </button>
-          <button class="nav-link" data-section="projects">
-            <i class="fas fa-code"></i>
-            <span>Projects</span>
-          </button>
-          <button class="nav-link" data-section="contact">
+    </section>
+
+    <!-- ===== WORK ===== -->
+    <section class="section" id="work">
+      <div class="section-intro">
+        <h1 class="section-title">Selected work</h1>
+        <p class="section-desc">Projects I've built and shipped. Each one solved a real problem.</p>
+      </div>
+
+      <div class="projects-list">
+
+        <div class="project-row">
+          <div class="project-meta">
+            <span class="project-year">2024</span>
+            <div class="project-badges">
+              <span class="badge b-backend">Backend</span>
+              <span class="badge b-java">Java</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header-row">
+              <h3 class="project-name">Online Polling System</h3>
+              <a href="https://github.com/sulabhsaluja/online-polling-system" target="_blank" class="proj-link" title="GitHub">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+            <p class="project-desc-text">
+              A backend-first polling platform. Built the full engine in Spring Boot —
+              poll creation, real-time vote aggregation, MVC layering with Spring Data
+              JPA + Hibernate. Optimised MySQL queries so vote counts stay fast under
+              load. Locked down all endpoints with Spring Security and added input
+              validation to block SQL injection from day one.
+            </p>
+            <div class="project-tech-row">
+              <code>Spring Boot</code><code>Spring Security</code><code>Hibernate / JPA</code><code>MySQL</code><code>REST API</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-meta">
+            <span class="project-year">2024</span>
+            <div class="project-badges">
+              <span class="badge b-fullstack">Full Stack</span>
+              <span class="badge b-node">Node</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header-row">
+              <h3 class="project-name">InternSpot</h3>
+              <div class="proj-links-group">
+                <a href="https://github.com/sulabhsaluja/internspot-job-portal-" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://internspot.onrender.com/" target="_blank" class="proj-link" title="Live"><i class="fas fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <p class="project-desc-text">
+              A job portal where employers post listings and candidates apply — the whole
+              lifecycle. Node.js + Express on the backend with auth, job state management,
+              and application tracking. MongoDB with custom indexing to keep queries snappy.
+              Deployed on Render.
+            </p>
+            <div class="project-tech-row">
+              <code>Node.js</code><code>Express</code><code>MongoDB</code><code>Handlebars</code><code>CSS3</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-meta">
+            <span class="project-year">2024</span>
+            <div class="project-badges">
+              <span class="badge b-fullstack">Full Stack</span>
+              <span class="badge b-node">Node</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header-row">
+              <h3 class="project-name">NewsNest</h3>
+              <div class="proj-links-group">
+                <a href="https://github.com/sulabhsaluja/NewsNest/" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://newsnest-szje.onrender.com/" target="_blank" class="proj-link" title="Live"><i class="fas fa-arrow-up-right-from-square"></i></a>
+              </div>
+            </div>
+            <p class="project-desc-text">
+              City-specific news aggregator pulling from the NewsData.io API. Users get
+              a personalised dashboard with search history, saved articles, and city
+              filtering. Built auth + sessions from scratch, no auth library.
+            </p>
+            <div class="project-tech-row">
+              <code>Node.js</code><code>Express</code><code>MongoDB</code><code>NewsData.io API</code><code>Handlebars</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-meta">
+            <span class="project-year">2025</span>
+            <div class="project-badges">
+              <span class="badge b-oss">Open Source</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-header-row">
+              <h3 class="project-name">GirlScript Summer of Code</h3>
+              <a href="https://github.com/sulabhsaluja" target="_blank" class="proj-link" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="project-desc-text">
+              Contributed to two projects under GSSoC 2025. Fixed critical build and
+              dependency issues in DeshDarshan that were blocking stable releases.
+              Also did code reviews and UI/UX fixes for a Weather App — improving
+              layout consistency and reducing friction for new users.
+            </p>
+            <div class="project-tech-row">
+              <code>Git</code><code>GitHub</code><code>Code Review</code><code>UI/UX</code>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="more-on-github">
+        <a href="https://github.com/sulabhsaluja" target="_blank">
+          More on GitHub <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== RÉSUMÉ ===== -->
+    <section class="section" id="resume">
+      <div class="section-intro">
+        <h1 class="section-title">Résumé</h1>
+        <p class="section-desc">
+          Education, experience, and credentials.
+          <a href="https://drive.google.com/file/d/1fas1d0LwyPupkhZ5KJWvAFab09o1EZjv/view?usp=sharing" target="_blank" class="inline-link">Download PDF ↗</a>
+        </p>
+      </div>
+
+      <div class="resume-grid">
+
+        <div class="resume-col">
+          <h2 class="resume-col-title">Education</h2>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <span class="entry-title">B.E. Computer Science Engineering</span>
+              <span class="entry-date">2023 – 2027</span>
+            </div>
+            <span class="entry-org">Chitkara University, Rajpura</span>
+            <p class="entry-desc">CGPA 9.18 / 10. DSA, OS, DBMS, OOP, System Design, Networks.</p>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <span class="entry-title">Senior Secondary (12th)</span>
+              <span class="entry-date">2023</span>
+            </div>
+            <span class="entry-org">CBSE Board</span>
+            <p class="entry-desc">Science stream — Maths, Physics, Chemistry.</p>
+          </div>
+        </div>
+
+        <div class="resume-col">
+          <h2 class="resume-col-title">Experience</h2>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <span class="entry-title">Open Source Contributor</span>
+              <span class="entry-date">GSSoC 2025</span>
+            </div>
+            <span class="entry-org">GirlScript Summer of Code</span>
+            <p class="entry-desc">
+              Resolved build & dependency issues in DeshDarshan. Code reviews and
+              UI/UX improvements for a Weather App. Async collaboration via GitHub workflows.
+            </p>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <span class="entry-title">SE Virtual Internship</span>
+              <span class="entry-date">Forage</span>
+            </div>
+            <span class="entry-org">Accenture</span>
+            <p class="entry-desc">Debugging, API design, and Agile practices in a consulting simulation.</p>
+          </div>
+
+          <div class="resume-entry">
+            <div class="entry-header">
+              <span class="entry-title">Data Analyst Virtual Internship</span>
+              <span class="entry-date">Forage</span>
+            </div>
+            <span class="entry-org">Deloitte</span>
+            <p class="entry-desc">Data cleaning, visualisation, and insights using Excel and analytics techniques.</p>
+          </div>
+        </div>
+
+        <div class="resume-col resume-col-full">
+          <h2 class="resume-col-title">Certifications</h2>
+          <div class="certs-row">
+            <div class="cert-item">
+              <span class="cert-issuer">Nutanix</span>
+              <span class="cert-name">Nutanix Certified Associate (NCA) 6.0</span>
+              <p class="cert-desc">Cloud infrastructure management, system deployment, platform operations.</p>
+            </div>
+            <div class="cert-item">
+              <span class="cert-issuer">IBM</span>
+              <span class="cert-name">Intro to Agile Development & Scrum</span>
+              <p class="cert-desc">Agile methodologies for iterative, collaborative delivery.</p>
+            </div>
+            <div class="cert-item">
+              <span class="cert-issuer">Postman</span>
+              <span class="cert-name">Postman Student Expert</span>
+              <p class="cert-desc">REST API testing and automation fundamentals.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section" id="contact">
+      <div class="section-intro">
+        <h1 class="section-title">Get in touch</h1>
+        <p class="section-desc">
+          Open to internships, full-time roles, and interesting projects.
+          Drop me a message — I reply within a day.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left">
+          <a href="mailto:sulabhsaluja111@gmail.com" class="contact-row-link">
             <i class="fas fa-envelope"></i>
-            <span>Contact</span>
-          </button>
+            <div><span class="clabel">Email</span><span class="cvalue">sulabhsaluja111@gmail.com</span></div>
+          </a>
+          <a href="https://linkedin.com/in/sulabhsaluja" target="_blank" class="contact-row-link">
+            <i class="fab fa-linkedin"></i>
+            <div><span class="clabel">LinkedIn</span><span class="cvalue">sulabhsaluja</span></div>
+          </a>
+          <a href="https://github.com/sulabhsaluja" target="_blank" class="contact-row-link">
+            <i class="fab fa-github"></i>
+            <div><span class="clabel">GitHub</span><span class="cvalue">sulabhsaluja</span></div>
+          </a>
+          <a href="https://leetcode.com/u/sulabh_saluja" target="_blank" class="contact-row-link">
+            <i class="fas fa-code"></i>
+            <div><span class="clabel">LeetCode</span><span class="cvalue">sulabh_saluja</span></div>
+          </a>
         </div>
-      </nav>
 
-      <!-- Content Sections -->
-      <div class="content-container">
-        <!-- About Section -->
-        <section class="content-section active" id="about">
-          <div class="section-header">
-            <h2 class="section-title">About Me</h2>
-            <div class="section-subtitle">Get to know me better</div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="from_name" placeholder="Your name" required />
           </div>
-
-          <div class="about-content">
-            <div class="about-text-container">
-              <p class="about-text">
-                I’m a
-                <span class="highlight">Full Stack Developer</span> pursuing my
-                B.E. in Computer Science at Chitkara University, with hands-on
-                experience in building scalable web applications and
-                contributing to open source.
-              </p>
-
-              <p class="about-text">
-                As a <span class="highlight">GSSoC Contributor</span>, I’ve
-                worked on real-world codebases, submitting PRs that improved
-                functionality and collaboration across distributed teams. I’m
-                also a certified
-                <span class="highlight"
-                  >Postman Student Expert in RESTful APIs</span
-                >, skilled in designing, testing, and automating API workflows
-                that strengthen backend reliability.
-              </p>
-
-              <p class="about-text">
-                Beyond certifications, I’ve completed
-                <span class="highlight"
-                  >virtual internships with Accenture and Deloitte</span
-                >, gaining exposure to software engineering practices and
-                data-driven problem solving.
-              </p>
-
-              <p class="about-text">
-                I specialize in modern web technologies and thrive on creating
-                digital experiences that
-                <span class="highlight">solve real-world problems at scale</span
-                >. When I’m not coding, I’m exploring emerging technologies or
-                sharing insights with fellow developers.
-              </p>
-            </div>
-
-            <div class="skills-container">
-              <h3 class="skills-title">
-                <i class="fas fa-code"></i>
-                Technologies I Work With
-              </h3>
-              <div class="skills-grid">
-                <div class="skill-card">
-                  <i class="fab fa-js-square"></i>
-                  <span>JavaScript</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fab fa-java"></i>
-                  <span>Java</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fab fa-node-js"></i>
-                  <span>Node.js</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-database"></i>
-                  <span>MongoDB</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fab fa-react"></i>
-                  <span>React</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fas fa-server"></i>
-                  <span>Express</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fab fa-python"></i>
-                  <span>Python</span>
-                </div>
-                <div class="skill-card">
-                  <i class="fab fa-html5"></i>
-                  <span>HTML/CSS</span>
-                </div>
-              </div>
-            </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="from_email" placeholder="you@example.com" required />
           </div>
-        </section>
-
-        <!-- Resume Section -->
-        <section class="content-section" id="resume">
-          <div class="section-header">
-            <h2 class="section-title">Resume</h2>
-            <div class="section-subtitle">
-              My educational background & experience
-            </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
           </div>
-
-          <div class="resume-content">
-            <!-- Education -->
-            <div class="resume-section">
-              <h3 class="resume-section-title">
-                <i class="fas fa-graduation-cap"></i>
-                Education
-              </h3>
-              <div class="education-timeline">
-                <div class="education-item">
-                  <div class="timeline-dot"></div>
-                  <div class="education-content">
-                    <div class="education-header">
-                      <h4 class="education-title">
-                        Bachelor of Engineering in Computer Science
-                      </h4>
-                      <span class="education-duration">2023 – 2027</span>
-                    </div>
-                    <p class="education-institution">
-                      Chitkara University, Rajpura
-                    </p>
-                    <p class="education-description">
-                      Currently pursuing my degree with a focus on software
-                      development, data structures, algorithms, and modern web
-                      technologies.
-                    </p>
-                  </div>
-                </div>
-                <div class="education-item">
-                  <div class="timeline-dot"></div>
-                  <div class="education-content">
-                    <div class="education-header">
-                      <h4 class="education-title">Senior Secondary (12th)</h4>
-                      <span class="education-duration">2023</span>
-                    </div>
-                    <p class="education-institution">CBSE Board</p>
-                    <p class="education-description">
-                      Completed with Science stream focusing on Mathematics,
-                      Physics, and Chemistry. Developed strong analytical and
-                      problem-solving skills.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Experience -->
-            <div class="resume-section">
-              <h3 class="resume-section-title">
-                <i class="fas fa-briefcase"></i>
-                Experience & Projects
-              </h3>
-              <div class="experience-timeline">
-                <div class="experience-item">
-                  <div class="timeline-dot"></div>
-                  <div class="experience-content">
-                    <div class="experience-header">
-                      <h4 class="experience-title">Full Stack Developer</h4>
-                      <span class="experience-duration">2023 – Present</span>
-                    </div>
-                    <p class="experience-company">
-                      Personal Projects & Freelance
-                    </p>
-                    <ul class="experience-description">
-                      <li>
-                        Developed multiple full-stack web applications using
-                        MERN stack
-                      </li>
-                      <li>
-                        Built responsive and user-friendly interfaces with
-                        modern design principles
-                      </li>
-                      <li>
-                        Implemented secure authentication and database
-                        management systems
-                      </li>
-                      <li>
-                        Created scalable applications that solve real-world
-                        problems
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Skills -->
-            <div class="resume-section">
-              <h3 class="resume-section-title">
-                <i class="fas fa-chart-bar"></i>
-                Technical Skills
-              </h3>
-              <div class="skills-list">
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">
-                      <i class="fab fa-js-square skill-icon"></i>
-                      JavaScript
-                    </span>
-                    <span class="skill-percentage">90%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="90"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">
-                      <i class="fab fa-java skill-icon"></i>
-                      Java
-                    </span>
-                    <span class="skill-percentage">85%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="85"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">
-                      <i class="fas fa-layer-group skill-icon"></i>
-                      MERN Stack
-                    </span>
-                    <span class="skill-percentage">88%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="88"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">
-                      <i class="fab fa-python skill-icon"></i>
-                      Python
-                    </span>
-                    <span class="skill-percentage">75%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="75"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">
-                      <i class="fab fa-html5 skill-icon"></i>
-                      HTML/CSS
-                    </span>
-                    <span class="skill-percentage">92%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="92"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-header">
-                    <span class="skill-name">
-                      <i class="fas fa-database skill-icon"></i>
-                      Database Management
-                    </span>
-                    <span class="skill-percentage">80%</span>
-                  </div>
-                  <div class="skill-bar">
-                    <div class="skill-progress" data-width="80"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="resume-section">
-              <h3 class="resume-section-title">
-                <i class="fas fa-certificate"></i>
-                Certifications & Achievements
-              </h3>
-              <div class="certifications-grid">
-                <div class="certification-item">
-                  <div class="cert-icon">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  <div class="cert-content">
-                    <h4>
-                      Software Engineering Virtual Internship – Accenture
-                      (Forage)
-                    </h4>
-                    <p>
-                      Participated in a simulation emphasizing real-world
-                      consulting scenarios. Engaged in debugging, API design,
-                      and agile practices to deliver technical solutions.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="certification-item">
-                  <div class="cert-icon">
-                    <i class="fas fa-database"></i>
-                  </div>
-                  <div class="cert-content">
-                    <h4>Data Analyst Virtual Internship – Deloitte (Forage)</h4>
-                    <p>
-                      Completed a simulation involving data cleaning,
-                      visualization, and deriving insights. Utilized Excel and
-                      analytics techniques to support data-driven
-                      decision-making.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="certification-item">
-                  <div class="cert-icon">
-                    <i class="fas fa-code-branch"></i>
-                  </div>
-                  <div class="cert-content">
-                    <h4>GSSoC Contributor – GirlScript Summer of Code</h4>
-                    <p>
-                      Contributed multiple PRs to open-source projects,
-                      enhancing features and fixing bugs. Collaborated with
-                      distributed teams using Git/GitHub workflows in a
-                      real-world dev environment.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="certification-item">
-                  <div class="cert-icon">
-                    <i class="fas fa-network-wired"></i>
-                  </div>
-                  <div class="cert-content">
-                    <h4>Postman Student Expert – RESTful APIs</h4>
-                    <p>
-                      Certified in designing, testing, and automating RESTful
-                      API workflows. Built Postman collections and automated
-                      test suites integrated with full-stack projects.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="certification-item">
-                  <div class="cert-icon">
-                    <i class="fas fa-trophy"></i>
-                  </div>
-                  <div class="cert-content">
-                    <h4>Academic Excellence</h4>
-                    <p>
-                      Maintaining high academic performance in Computer Science
-                      program.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section class="content-section" id="projects">
-          <div class="section-header">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="section-subtitle">Some of my best work</div>
-          </div>
-
-          <div class="projects-grid">
-            <!-- InternSpot Project -->
-            <div class="project-card">
-              <div class="project-image">
-                <img
-                  src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="InternSpot"
-                />
-                <div class="project-overlay">
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/sulabhsaluja/Internspot-Job-Portal-"
-                      target="_blank"
-                      class="project-link github-link"
-                      title="View Code"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a
-                      href="https://internspot.onrender.com/"
-                      target="_blank"
-                      class="project-link live-link"
-                      title="Live Demo"
-                    >
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">InternSpot</h3>
-                <p class="project-description">
-                  A full-stack job portal built with Node.js, Express, MongoDB,
-                  and Handlebars. Employers can post and manage jobs while
-                  seekers apply seamlessly. Implemented authentication, secure
-                  database management, and scalable features.
-                </p>
-                <div class="project-technologies">
-                  <span class="tech-tag node">Node.js</span>
-                  <span class="tech-tag express">Express</span>
-                  <span class="tech-tag mongo">MongoDB</span>
-                  <span class="tech-tag handlebars">Handlebars</span>
-                  <span class="tech-tag css">CSS3</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- NewsNest Project -->
-            <div class="project-card">
-              <div class="project-image">
-                <img
-                  src="https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="NewsNest"
-                />
-                <div class="project-overlay">
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/sulabhsaluja/NewsNest/"
-                      target="_blank"
-                      class="project-link github-link"
-                      title="View Code"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a
-                      href="https://newsnest-szje.onrender.com/"
-                      target="_blank"
-                      class="project-link live-link"
-                      title="Live Demo"
-                    >
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">NewsNest</h3>
-                <p class="project-description">
-                  A city-specific news web app using Node.js, Express, MongoDB,
-                  and Handlebars. Integrated with NewsData.io API for real-time
-                  news, with login/signup, search history, favorites, and
-                  dashboard features.
-                </p>
-                <div class="project-technologies">
-                  <span class="tech-tag node">Node.js</span>
-                  <span class="tech-tag express">Express</span>
-                  <span class="tech-tag handlebars">Handlebars</span>
-                  <span class="tech-tag api">News API</span>
-                  <span class="tech-tag css">CSS3</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- GSSoC Contribution Project -->
-            <div class="project-card">
-              <div class="project-image">
-                <img
-                  src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="GSSoC Contributions"
-                />
-                <div class="project-overlay">
-                  <div class="project-links">
-                    <a
-                      href="https://github.com/sulabhsaluja"
-                      target="_blank"
-                      class="project-link github-link"
-                      title="View PRs"
-                    >
-                      <i class="fab fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">GSSoC Contributions</h3>
-                <p class="project-description">
-                  Contributed to open-source projects under GirlScript Summer of
-                  Code. Fixed bugs, added features, and collaborated with
-                  distributed teams using Git/GitHub workflows.
-                </p>
-                <div class="project-technologies">
-                  <span class="tech-tag git">Git</span>
-                  <span class="tech-tag github">GitHub</span>
-                  <span class="tech-tag opensource">Open Source</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Postman API Expert Project -->
-            <div class="project-card">
-              <div class="project-image">
-                <img
-                  src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Postman API Expert"
-                />
-                <div class="project-overlay">
-                  <div class="project-links">
-                    <a
-                      href="https://badgr.com/public/assertions/v5BdLMIBQxafMYPfDcvaFw"
-                      target="_blank"
-                      class="project-link github-link"
-                      title="View Workspace"
-                    >
-                      <i class="fas fa-external-link-alt"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="project-content">
-                <h3 class="project-title">Postman API Expert</h3>
-                <p class="project-description">
-                  Certified Postman Student Expert: Designed, tested, and
-                  automated RESTful APIs. Built a Postman workspace
-                  demonstrating authentication, query parameters, and API key
-                  authorization.
-                </p>
-                <div class="project-technologies">
-                  <span class="tech-tag postman">Postman</span>
-                  <span class="tech-tag api">REST API</span>
-                  <span class="tech-tag automation">Automation</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- GitHub Profile Link -->
-          <div class="github-profile-section">
-            <div class="github-profile-card">
-              <div class="github-icon">
-                <i class="fab fa-github"></i>
-              </div>
-              <div class="github-content">
-                <h3>Explore More Projects</h3>
-                <p>
-                  Check out my GitHub profile for more projects and
-                  contributions
-                </p>
-                <a
-                  href="https://github.com/sulabhsaluja"
-                  target="_blank"
-                  class="github-btn"
-                >
-                  <i class="fab fa-github"></i>
-                  <span>Visit GitHub Profile</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="content-section" id="contact">
-          <div class="section-header">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="section-subtitle">Let's work together</div>
-          </div>
-
-          <div class="contact-container">
-            <div class="contact-info">
-              <div class="contact-intro">
-                <h3>Let's create something amazing together!</h3>
-                <p>
-                  I'm always interested in new opportunities and exciting
-                  projects. Whether you have a question, want to collaborate, or
-                  just want to say hi, feel free to reach out!
-                </p>
-              </div>
-
-              <div class="contact-methods">
-                <div class="contact-method">
-                  <div class="contact-method-icon">
-                    <i class="fas fa-envelope"></i>
-                  </div>
-                  <div class="contact-method-details">
-                    <h4>Email</h4>
-                    <p>connect.sulabhsaluja@gmail.com</p>
-                    <span>I'll respond within 24 hours</span>
-                  </div>
-                </div>
-                <div class="contact-method">
-                  <div class="contact-method-icon">
-                    <i class="fas fa-phone"></i>
-                  </div>
-                  <div class="contact-method-details">
-                    <h4>Phone</h4>
-                    <p>Available upon request</p>
-                    <span>Available Mon-Fri, 9AM-6PM</span>
-                  </div>
-                </div>
-                <div class="contact-method">
-                  <div class="contact-method-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                  </div>
-                  <div class="contact-method-details">
-                    <h4>Location</h4>
-                    <p>Punjab, India</p>
-                    <span>Open to remote work</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <form class="contact-form" id="contactForm">
-              <div class="form-header">
-                <h3>Send me a message</h3>
-                <p>I'd love to hear from you</p>
-              </div>
-
-              <div class="form-group">
-                <label for="name">
-                  <i class="fas fa-user"></i>
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="from_name"
-                  placeholder="Your full name"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="email">
-                  <i class="fas fa-envelope"></i>
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="from_email"
-                  placeholder="your.email@example.com"
-                  required
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="message">
-                  <i class="fas fa-comment"></i>
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows="5"
-                  placeholder="Tell me about your project or just say hello..."
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="submit-btn">
-                <i class="fas fa-paper-plane"></i>
-                <span>Send Message</span>
-                <div class="btn-glow"></div>
-              </button>
-            </form>
-          </div>
-        </section>
+          <button type="submit" class="send-btn">
+            Send message <i class="fas fa-arrow-right"></i>
+          </button>
+        </form>
       </div>
-    </main>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+  </main>
+
+  <footer class="site-footer">
+    <span>Sulabh Saluja · 2025</span>
+    <span>Built from scratch · Punjab, India</span>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
 </html>
